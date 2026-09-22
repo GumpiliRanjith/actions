@@ -1,5 +1,10 @@
 name: ranjith
-on : push
+
+on:
+    push:
+        branches:
+            - main
+            - master
 jobs:
     ranjith:
         runs-on: ubuntu-latest
@@ -12,33 +17,9 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                 path: welcome.txt
-    kumer:
-        needs: ranjith
-        runs-on: ubuntu-latest
-        steps:
-            - name: use artifact
-              uses: actions/download-artifact@v4
-              with:
-                path: .
-            - name: list all files
+            - name: install java
               run: |
-                 ls
-                 pwd
-                 whoami
+                 sudo apt install default-jre
+                 java --version
 
-    april:
-        needs: ranjith
-        runs-on: ubuntu-latest
-        steps:
-            - name: just
-              run: echo "hello world"
-    june:
-        runs-on: ubuntu-latest
-        needs: april
-        steps:
-            - name: matrix
-              run: echo "just architecture"
-
-        
-            
-            
+    
