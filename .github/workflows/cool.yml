@@ -34,6 +34,7 @@ jobs:
               run: echo "hello world"
     june:
         runs-on: ubuntu-latest
+        needs: april
         steps:
             - name: matrix
               run: echo "just architecture"
