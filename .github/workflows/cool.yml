@@ -7,7 +7,7 @@ jobs:
             - name: welcome
               run: |
                 echo "hello"
-                echo "welcome " > welcome.txt
+                echo "hello " > welcome.txt
             - name: hi
               uses: actions/upload-artifact@v4
               with:
