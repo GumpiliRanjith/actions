@@ -9,6 +9,6 @@ jobs:
                 echo "hello world"
                 echo "welcome " > welcome.txt
             - name: hi
-              uses: actions/upload-artifiact@v4
+              uses: actions/upload-artifact@v4
               with:
                 path: welcome.txt
