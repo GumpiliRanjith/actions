@@ -1,0 +1,14 @@
+name: ranjith
+on : push
+jobs:
+    ranjith:
+        runs-on: ubuntu-latest
+        steps:
+            - name: welcome
+              run: |
+                echo "hello world"
+                echo "welcome " > welcome.txt
+            - name: hi
+              uses: actions/upload-artifiact@v4
+              with:
+                path: welcome.txt
