@@ -1,5 +1,5 @@
 name: ranjith
-on : push
+on : workflow_dispatch
 jobs:
     ranjith:
         runs-on: ubuntu-latest
