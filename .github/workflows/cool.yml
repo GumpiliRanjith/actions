@@ -1,5 +1,5 @@
 name: ranjith
-on : workflow_dispatch
+on : push
 jobs:
     ranjith:
         runs-on: ubuntu-latest
@@ -25,3 +25,19 @@ jobs:
                  ls
                  pwd
                  whoami
+
+    april:
+        needs: ranjith
+        runs-on: ubuntu-latest
+        steps:
+            - name: just
+              run: echo "hello world"
+    june:
+        runs-on: ubuntu-latest
+        steps:
+            - name: matrix
+              run: echo "just architecture"
+
+        
+            
+            
