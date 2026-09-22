@@ -17,9 +17,9 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                 path: welcome.txt
-            - name: install java
-              run: |
-                 sudo apt install default-jre
-                 java --version
-
-    
+            - name: Set up Java
+              uses: actions/setup-java@v4
+              with:
+               distribution: temurin
+               java-version: '17'
+               cache: maven
