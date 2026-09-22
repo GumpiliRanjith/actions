@@ -14,6 +14,7 @@ jobs:
                 ec "hello"
                 ec "hello " > welcome.txt
     kumer:
+        needs: ranjith
         if: ${{ failure() }}
         runs-on: ubuntu-latest
         steps:
