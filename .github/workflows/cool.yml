@@ -11,15 +11,11 @@ jobs:
         steps:
             - name: welcome
               run: |
-                echo "hello"
-                echo "hello " > welcome.txt
-            - name: hi
-              uses: actions/upload-artifact@v4
-              with:
-                path: welcome.txt
-            - name: Set up Java
-              uses: actions/setup-java@v4
-              with:
-               distribution: temurin
-               java-version: '17'
-               cache: maven
+                ec "hello"
+                ec "hello " > welcome.txt
+    kumer:
+        if: ${{ failure() }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: actions
+              run: echo "hello world"
