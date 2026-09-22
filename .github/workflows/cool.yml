@@ -12,3 +12,16 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                 path: welcome.txt
+    kumer:
+        needs: ranjith
+        runs-on: ubuntu-latest
+        steps:
+            - name: use artifact
+              uses: actions/download-artifact@v4
+              with:
+                path: .
+            - name: list all files
+              run: |
+                 ls
+                 pwd
+                 whoami
